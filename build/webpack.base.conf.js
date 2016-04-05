@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
 	entry: {
-		app: './src/zeus.js'
+		app: './docs/index.js'
 	},
 	output: {
 		path: path.resolve(__dirname, '../dist'),
@@ -10,30 +10,22 @@ module.exports = {
 		filename: '[name].js'
 	},
 	resolve: {
-		extensions: ['', '.js', '.vue'],
-		alias: {
-			'src': path.resolve(__dirname, '../src')
-		}
-	},
-	resolveLoader: {
-		root: path.join(__dirname, 'node_modules')
+		extensions: ['', '.js', '.vue']
+
+		// alias: {
+		// 	'src': path.resolve(__dirname, '../doc')
+		// }
 	},
 	module: {
-		preLoders: [
-			{
-				test: '/.js$/',
-				loader: 'eslint',
-				exclude: /node_modules/
-			}
-		],
 		loaders: [
 			{
 				test: /\.vue$/,
 				loader: 'vue'
 			},
 			{
-				test: /\.js/,
-				loader: 'babel'
+				test: /\.js$/,
+				loader: 'babel',
+				exclude: /node_modules/
 			},
 			{
         test: /\.json$/,
