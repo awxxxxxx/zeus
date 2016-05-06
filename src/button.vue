@@ -34,7 +34,10 @@
 	      type: Boolean
 	    },
 	    primary: {
-	      type: Boolean
+	      type: Boolean,
+	      default () {
+	      	return true;
+	      }
 	    },
 	    miniFab: {
 	      type: Boolean
@@ -43,10 +46,16 @@
 	      type: Boolean
 	    },
 	    raised: {
-	      type: Boolean
+	      type: Boolean,
+	      default () {
+	      	return true;
+	      }
 	    },
 	    colored: {
-	      type: Boolean
+	      type: Boolean,
+	      default () {
+	      	return true;
+	      }
 	    }
   	},
   	ready () {
