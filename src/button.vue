@@ -3,7 +3,7 @@
 </style>
 
 <template>
-	<button class="mdl-button mdl-js-button" v-bind:class="buttonClass">
+	<button class="mdl-button mdl-js-button mdl-js-ripple-effect" v-bind:class="buttonClass">
 		<slot></slot>	
 	</button>
 </template>
@@ -31,7 +31,10 @@
 	      required: false
 	    },
 	    accent: {
-	      type: Boolean
+	      type: Boolean,
+	      default () {
+	      	return true;
+	      }
 	    },
 	    primary: {
 	      type: Boolean,

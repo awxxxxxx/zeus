@@ -5,7 +5,7 @@
 
 	export default {
 		ready () {
-			console.log('hhahah');
+			console.log('app');
 		}
 	}
 </script>
