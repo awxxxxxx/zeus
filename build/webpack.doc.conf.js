@@ -1,16 +1,7 @@
-var webpack = require('webpack')
-var config = require('./webpack.base.conf')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-
-config.entry.app = './src/zeus.js';
-
-// naming output files with hashes for better caching.
-// dist/index.html will be auto-generated with correct URLs.
-config.output.filename = 'zeus.min.js'
-config.output.chunkFilename = '[id].[chunkhash].js'
-config.output.library = 'Zeus';
-config.output.libraryTarget = 'umd';
+var webpack = require('webpack');
+var config = require('./webpack.base.conf');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // whether to generate source map for production files.
 // disabling this can speed up the build.
@@ -42,6 +33,10 @@ config.plugins = (config.plugins || []).concat([
       jQuery: "jquery"
   }),
   new webpack.optimize.OccurenceOrderPlugin(),
+  new HtmlWebpackPlugin({
+    filename: 'index.html',
+    template: './index.html'
+  })
 ])
 
 module.exports = config

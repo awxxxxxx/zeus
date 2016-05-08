@@ -13,7 +13,7 @@
 			lang: String
 		},
 		ready () {
-
+			prismjs.highlightAll();	
 		}
 	}
 </script>

@@ -1,24 +1,34 @@
 <template>
 	<div>
-		<h1 class="mdl-layout-title">普通按钮</h1>
+		<div class="doc-title"><h3>Raised</h3></div>
 		<z-button>
-			haha
+			button
 		</z-button>
-		<pre>
-			<code class="html">
-				<p>{{ code.buttonNormal }}</p>
-			</code>
-		</pre>
-		<h1 class="mdl-layout-title">圆形按钮</h1>
+		<z-code lang="html">
+			{{ code.buttonNormal }}
+		</z-code>
+		<h2 class="doc-title">Fab</h2>
 		<z-button :mini-fab="true"><i class="material-icons">add</i></z-button>
+		<z-code lang="html">
+			{{ code.buttonFab }}
+		</z-code>
 	</div>
 </template>
 <script>
+	import ZCode from '../utils/zcode.vue';
+
 	export default {
+		components: {
+			ZCode
+		},
 		data () {
 			return {
 				code: {
-					buttonNormal: '<z-button><z-button>'
+					buttonNormal: `<z-button>button<z-button>`,
+					buttonFab: `
+			<z-button :mini-fab="true">
+				<i class="material-icons">add</i>
+			</z-button>`
 				}
 			}
 		},

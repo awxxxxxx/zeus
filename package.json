@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test",
     "dev": "webpack-dev-server --inline --hot --config build/webpack.dev.conf.js",
-    "build": "rimraf dist && webpack --progress --hide-modules --config build/webpack.prod.conf.js"
+    "build": "rimraf dist && webpack --progress --hide-modules --config build/webpack.prod.conf.js",
+    "doc": "rimraf dist && webpack --progress --hide-modules --config build/webpack.doc.conf.js"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,13 @@
+<style>
+	.doc-title {
+		font-weight: 300;
+    color:#41b883;
+	}
+</style>
 <template>
-	<router-view></router-view>
+	<div class="mdl-cell mdl-cell--12-col">
+		<router-view></router-view>	
+	</div>
 </template>
 <script>
 
