@@ -32,4 +32,7 @@ router.map({
 		component: Examples.Buttons
 	}
 });
+router.redirect({
+	'*': '/button'
+})
 router.start(app, 'body');

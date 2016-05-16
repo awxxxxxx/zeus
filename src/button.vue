@@ -31,16 +31,10 @@
 	      required: false
 	    },
 	    accent: {
-	      type: Boolean,
-	      default () {
-	      	return true;
-	      }
+	      type: Boolean
 	    },
 	    primary: {
-	      type: Boolean,
-	      default () {
-	      	return true;
-	      }
+	      type: Boolean
 	    },
 	    miniFab: {
 	      type: Boolean
@@ -49,16 +43,10 @@
 	      type: Boolean
 	    },
 	    raised: {
-	      type: Boolean,
-	      default () {
-	      	return true;
-	      }
+	      type: Boolean
 	    },
 	    colored: {
-	      type: Boolean,
-	      default () {
-	      	return true;
-	      }
+	      type: Boolean
 	    }
   	},
   	ready () {

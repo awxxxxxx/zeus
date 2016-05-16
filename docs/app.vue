@@ -1,4 +1,8 @@
 <style>
+	.v-link-active {
+		background-color: rgb(224,224,224);
+	}
+
 	.doc-title {
 		font-weight: 300;
     color:#41b883;
