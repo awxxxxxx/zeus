@@ -12,5 +12,14 @@ export default {
 		value: {
 			required: false
 		}
+	},
+	computed: {
+		isChecked () {
+			if (this.checked instanceof Array) {
+				return this.checked.indexOf(this.value) >= 0;
+			} else {
+				return this.checked;
+			}
+		}
 	}
 }

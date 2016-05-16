@@ -18,6 +18,11 @@ const app = Vue.extend({
 	el () {
 		return 'body';
 	},
+	ready () {
+		this.$on('changeComponent', (name) => {
+			this.Home = name;
+		});
+	},
 	data () {
 		return {
 			Home: 'Button'
@@ -30,6 +35,10 @@ router.map({
 	'/button': {
 		name: 'button',
 		component: Examples.Buttons
+	},
+	'/forms': {
+		name: 'forms',
+		component: Examples.Forms
 	}
 });
 router.redirect({
