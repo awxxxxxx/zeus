@@ -3,11 +3,17 @@
 import ZButton from './button.vue';
 import ZRadio from './forms/radio.vue';
 import ZCheckbox from './forms/checkbox.vue';
+import ZSwitch from './forms/toggle.vue';
+import ZProgress from './progress.vue';
+import ZSpinner from './spinner.vue';
 
 export const components = {
 	ZButton,
 	ZRadio,
-	ZCheckbox
+	ZCheckbox,
+	ZSwitch,
+	ZProgress,
+	ZSpinner
 }
 
 

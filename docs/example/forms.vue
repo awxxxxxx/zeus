@@ -21,6 +21,14 @@
 		<p><z-checkbox value="checkbox4" :checked.sync="checkboxD" disabled>checkbox3</z-checkbox></p>
 		<z-code lang="html">{{ checkboxCode }}</z-code>
 	</section>
+	<section>
+		<h3 class="doc-title">Switch</h3>
+		<p><z-switch value="switch1" id="box2" :checked.sync="switchbox">checkbox1</z-switch></p>
+		<p><z-switch value="switch2" :checked.sync="switchbox">checkbox2</z-switch></p>
+		<p><z-switch value="switch3" :checked.sync="switchbox">checkbox3</z-switch></p>
+		<p><z-switch value="switch4" :checked.sync="switchboxd" disabled>checkbox4</z-switch></p>
+		<z-code lang="html">{{ checkboxCode }}</z-code>
+	</section>
 </template>
 <script>
 	import ZCode from '../utils/zcode.vue';
@@ -40,7 +48,13 @@
 				checkboxCode: `<z-checkbox value="checkbox1" id="box1" :checked.sync="checkbox">checkbox1</z-checkbox>
 			<z-checkbox value="checkbox2" :checked.sync="checkbox">checkbox2</z-checkbox>
 			<z-checkbox value="checkbox3" :checked.sync="checkbox">checkbox3</z-checkbox>
-			<z-checkbox value="checkbox4" :checked.sync="checkboxD" disabled>checkbox3</z-checkbox>`
+			<z-checkbox value="checkbox4" :checked.sync="checkboxD" disabled>checkbox3</z-checkbox>`,
+				switchbox: true,
+				switchboxd: false,
+				switchCode: `z-switch value="switch1" id="box2" :checked.sync="switchbox">checkbox1</z-switch>
+			<z-switch value="switch2" :checked.sync="switchbox">checkbox2</z-switch>
+			<z-switch value="switch3" :checked.sync="switchbox">checkbox3</z-switch>
+			<z-switch value="switch4" :checked.sync="switchboxd" disabled>checkbox4</z-switch>`
 			}
 		},
 		ready () {

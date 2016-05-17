@@ -39,6 +39,10 @@ router.map({
 	'/forms': {
 		name: 'forms',
 		component: Examples.Forms
+	},
+	'/slider': {
+		name: 'slider',
+		component: Examples.Slider
 	}
 });
 router.redirect({
