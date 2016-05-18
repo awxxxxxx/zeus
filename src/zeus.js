@@ -6,6 +6,7 @@ import ZCheckbox from './forms/checkbox.vue';
 import ZSwitch from './forms/toggle.vue';
 import ZProgress from './progress.vue';
 import ZSpinner from './spinner.vue';
+import ZTable from './table.vue';
 
 export const components = {
 	ZButton,
@@ -13,7 +14,8 @@ export const components = {
 	ZCheckbox,
 	ZSwitch,
 	ZProgress,
-	ZSpinner
+	ZSpinner,
+	ZTable
 }
 
 

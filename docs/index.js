@@ -43,6 +43,10 @@ router.map({
 	'/slider': {
 		name: 'slider',
 		component: Examples.Slider
+	},
+	'/table': {
+		name: 'table',
+		component: Examples.Table
 	}
 });
 router.redirect({
