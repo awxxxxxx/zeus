@@ -6,22 +6,37 @@
 	<section>
 		<h5 class="doc-title">without checkbox</h5>
 		<z-table :table-options="options"></z-table>
+		<z-code lang="html">{{ tableCode }}</z-code>
 	</section>
 
 </template>
 
 <script>
-	import zcode from '../utils/zcode.vue';
+	import ZCode from '../utils/zcode.vue';
 
 	export default {
 		components: {
-			zcode
+			ZCode
 		},
 		data () {
 			return {
 				options: {
 					checkbox: false
+				},
+				tableCode: `<template>
+				<z-table :table-options="options"></z-table>
+			</template>
+			<script>
+				export default {
+					data () {
+						return {
+							options: {
+								checkbox: false
+							}
+						}
+					}
 				}
+			<script>`
 			}
 		},
 		ready () {

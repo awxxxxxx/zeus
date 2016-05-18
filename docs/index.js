@@ -32,6 +32,10 @@ const app = Vue.extend({
 });
 
 router.map({
+	'/about': {
+		name: 'about',
+		component: Examples.About
+	},
 	'/button': {
 		name: 'button',
 		component: Examples.Buttons
@@ -47,6 +51,10 @@ router.map({
 	'/table': {
 		name: 'table',
 		component: Examples.Table
+	},
+	'/dialog': {
+		name: 'dialog',
+		component: Examples.Dialog
 	}
 });
 router.redirect({

@@ -7,6 +7,7 @@ import ZSwitch from './forms/toggle.vue';
 import ZProgress from './progress.vue';
 import ZSpinner from './spinner.vue';
 import ZTable from './table.vue';
+import ZDialog from './dialog.vue';
 
 export const components = {
 	ZButton,
@@ -15,7 +16,8 @@ export const components = {
 	ZSwitch,
 	ZProgress,
 	ZSpinner,
-	ZTable
+	ZTable,
+	ZDialog
 }
 
 
