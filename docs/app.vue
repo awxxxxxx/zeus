@@ -28,7 +28,7 @@
         <a class="mdl-navigation__link" v-link="{name: 'slider'}">Slider</a>
         <a class="mdl-navigation__link" v-link="{name: 'table'}">Table</a>
         <a class="mdl-navigation__link" v-link="{name: 'dialog'}">Dialog</a>
-        <a class="mdl-navigation__link" href="">Datepicker</a>
+        <a class="mdl-navigation__link" v-link="{name: 'datepicker'}">Datepicker</a>
         <a class="mdl-navigation__link" href="">Select</a>
         <a class="mdl-navigation__link" href="">Upload</a>
         <div class="mdl-layout-spacer"></div>

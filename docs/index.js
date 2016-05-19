@@ -49,6 +49,10 @@ router.map({
 			'/dialog': {
 				name: 'dialog',
 				component: Examples.Dialog
+			},
+			'/datepicker': {
+				name: 'datepicker',
+				component: Examples.Datepicker
 			}
 		}
 	},
