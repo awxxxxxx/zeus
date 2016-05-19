@@ -8,36 +8,9 @@
 <body>
 	<div id="app">
 		<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">{{ Home }}</span>
-          <div class="mdl-layout-spacer"></div>
-        </div>
-      </header>
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-          <div class="demo-avatar-dropdown">
-            <h2><center>Zeus</center></h2>
-          </div>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" v-link="{name: 'button'}">Button</a>
-          <a class="mdl-navigation__link" v-link="{name: 'forms'}">Forms</a>
-          <a class="mdl-navigation__link" v-link="{name: 'slider'}">Slider</a>
-          <a class="mdl-navigation__link" href="">Datepicker</a>
-          <a class="mdl-navigation__link" href="">Select</a>
-          <a class="mdl-navigation__link" href="">Upload</a>
-          <a class="mdl-navigation__link" href="">Alert</a>
-          <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href="">Modal</a>
-          <a class="mdl-navigation__link" href="">Table</a>
-          <a class="mdl-navigation__link" href="">Pagination</a>
-        </nav>
-      </div>
-      <main class="mdl-layout__content mdl-color--grey-100">
-        <app></app>
-      </main>
+      <router-view></router-view>
+    </div>
   </div>
-  <script src="/app.js"></script>
+  <script src="./dist/app.js"></script>
 </body>
 </html>
