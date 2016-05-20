@@ -49,7 +49,7 @@
 			}
 		},
 		ready () {
-			this.$dispatch('changeComponent', 'Forms');
+			this.$dispatch('changeComponent', 'Slider');
 		}
 	}
 </script>
