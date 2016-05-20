@@ -53,6 +53,18 @@ router.map({
 			'/datepicker': {
 				name: 'datepicker',
 				component: Examples.Datepicker
+			},
+			'/pagination': {
+				name: 'pagination',
+				component: Examples.Pagination
+			},
+			'/select': {
+				name: 'select',
+				component: Examples.Select
+			},
+			'/upload': {
+				name: 'upload',
+				component: Examples.Upload
 			}
 		}
 	},

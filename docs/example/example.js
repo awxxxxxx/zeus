@@ -3,7 +3,10 @@ import Forms from './forms.vue';
 import Slider from './slider.vue';
 import Table from './table.vue';
 import Dialog from './dialog.vue';
-import Datepicker from './datepicker.vue'
+import Datepicker from './datepicker.vue';
+import Pagination from './pagination.vue';
+import Select from './select.vue';
+import Upload from './upload.vue';
 
 export default {
 	Buttons,
@@ -11,5 +14,8 @@ export default {
 	Slider,
 	Table,
 	Dialog,
-	Datepicker
+	Datepicker,
+	Pagination,
+	Select,
+	Upload
 }

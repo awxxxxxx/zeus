@@ -1,7 +1,3 @@
-<style lang="less">
-	
-</style>
-
 <template>
 	<date-picker :option="timeOption" :time.sync="time"></date-picker>
 </template>

@@ -8,7 +8,8 @@ import ZProgress from './progress.vue';
 import ZSpinner from './spinner.vue';
 import ZTable from './table.vue';
 import ZDialog from './dialog.vue';
-import ZDatepicker from './datepicker.vue'
+import ZDatepicker from './datepicker.vue';
+import ZPagination from './pagination.vue';
 
 export const components = {
 	ZButton,
@@ -19,7 +20,8 @@ export const components = {
 	ZSpinner,
 	ZTable,
 	ZDialog,
-	ZDatepicker
+	ZDatepicker,
+	ZPagination
 }
 
 
