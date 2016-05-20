@@ -34,11 +34,6 @@
 	.permission {
 		background: #3F51B5;
 		color: #fff;
-
-		img {
-			width: 100px;
-			height: 100px;
-		}
 	}
 
 	.usability {
