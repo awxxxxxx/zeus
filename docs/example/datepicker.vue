@@ -7,6 +7,7 @@
 	<section>
 		<h3 class="doc-title">Date time</h3>
 		<z-datepicker :time.sync="datetime" :option="dateoption"></z-datepicker>
+		<z-datepicker :time.sync="datehearttime" :option="dateoption"></z-datepicker>
 		<z-code lang="html">{{ datetimeCode }}</z-code>
 	</section>
 	<section>
@@ -44,6 +45,7 @@
 					type: 'min',
 					format: 'YYYY-MM-DD HH:mm'
 				},
+				datehearttime: moment().format('YYYY-MM-DD HH:mm:ss'),
 				datetimeCode: `<template>
 				<z-datepicker :time.sync="time" :option="dateoption"></z-datepicker>
 			</template>
@@ -94,6 +96,11 @@
 		},
 		ready () {
 			this.$dispatch('changeComponent', 'Datepicker');
+			setInterval(() => {
+				this.$nextTick(() => {
+					this.datehearttime = moment().format('YYYY-MM-DD HH:mm:ss');
+				})
+			}, 1000);
 		}
 	}
 </script>
