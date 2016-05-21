@@ -2,11 +2,13 @@
 	<section>
 		<h3 class="doc-title">Alert</h3>
 		<button type="button" class="mdl-button mdl-button--raised" @click="show('toast')">Show Toast</button>
-		<z-alert :show-alert.sync="toast" :option="barOption"></z-alert>
+		<z-alert :show-alert.sync="toast"></z-alert>
 		<z-code lang="html">{{ toastCode }}</z-code>
 	</section>
 	<section>
-		<h3 class="doc-title">All props</h3>
+		<h3 class="doc-title">snackbar</h3>
+		<button type="button" class="mdl-button mdl-button--raised" @click="show('snackbar')">Show Snackbar</button>
+		<z-alert :show-alert.sync="snackbar" :option="barOption"></z-alert>
 		<z-code lang="html">{{ propsCode }}</z-code>
 	</section>
 </template>
@@ -21,8 +23,12 @@
 		data () {
 			return {
 				toast: false,
+				snackbar: false,
 				barOption: {
-					message: "Loading completed!"
+					message: 'Loading Completed!',
+  				actionHandler: function(event) {},
+  				actionText: 'Undo',
+  				timeout: 2000
 				},
 				toastCode: `<template>
 				<z-button @click="show">Show Toast<z-button>
@@ -58,7 +64,7 @@
 			show (type) {
 				switch(type) {
 					case 'toast': this.toast = true; break;
-					case 'toast': this.snackbar = true; break;
+					case 'snackbar': this.snackbar = true; break;
 				}
 			}
 		}
