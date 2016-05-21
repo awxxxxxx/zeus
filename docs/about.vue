@@ -51,7 +51,7 @@
 	<section class="component">
 		<h3 class="doc-title">组件丰富</h3>
 		<h5>zeus 集成了常用的基本组件，满足业务开发需要</h5>
-		<p>Table、Charts、Dialog、Datepicker、Select...</p>
+		<p>Table、Charts、Dialog、Datepicker、Alert...</p>
 		<section>
 			<img src="./asserts/ic_change_history_black_48px.svg">
 			<img src="./asserts/ic_trending_flat_black_48px.svg">
@@ -61,18 +61,20 @@
 	</section>
 	<section class="scalability">
 		<h3>可扩展性</h3>
-		<h5>Zeus 提供了丰富的组件同时，也提供了后续扩展开发的 API，满足个性化定制的需要</h5>
+		<h5>Zeus 提供了丰富的组件同时，也提供了后续扩展开发的 API，任意搭配前端框架或者库</h5>
+		<h5>满足个性化定制的需要</h5>
 		<img src="./asserts/ic_settings_white_48px.svg">
 	</section>
 	<section class="permission">
 		<h3>完备的权限控制</h3>
 		<h5>Zeus-Server 提供了完善的接口校验机制，同时提供了权限配置接口，便于权限相关的操作</h5>
+		<h5>权限控制到接口级别</h5>
 		<img src="./asserts/ic_https_white_48px.svg">
 	</section>
 	<section class="usability">
 		<h3>易用性强</h3>
-		<h5 class="vuejs">前端采用当下流行 Vue.js 作为前端视图库，避免直接 DOM 操作, 上手简单，对初学者友好</h5>
-		<h5 class="nodejs">后端采用 Node.js 的 Koa 框架编写</h5>
+		<h5 class="vuejs">前端采用当下流行 <a href="http://vuejs.org/">Vue.js</a> 作为前端视图库，避免直接 DOM 操作, 上手简单，对初学者友好</h5>
+		<h5 class="nodejs">后端采用 <a href="https://nodejs.org/en/">Node.js</a> 的 <a href="http://koajs.com/">Koa</a> 框架编写</h5>
 		<h5>前后端统一使用 Javascript 开发，减少语言切换开销，进一步提升开发效率</h5>
 		<img src="./asserts/ic_schedule_white_48px.svg">		
 	</section>

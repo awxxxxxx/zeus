@@ -65,6 +65,14 @@ router.map({
 			'/upload': {
 				name: 'upload',
 				component: Examples.Upload
+			},
+			'/charts': {
+				name: 'charts',
+				component: Examples.Charts
+			},
+			'/alert': {
+				name: 'alert',
+				component: Examples.Alert
 			}
 		}
 	},

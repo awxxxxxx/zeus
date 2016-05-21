@@ -1,5 +1,5 @@
 <template>
-	<h3 class="doc-title">Under building.</h3>
+	<h3 class="doc-title">Under building...</h3>
 </template>
 
 <script>
