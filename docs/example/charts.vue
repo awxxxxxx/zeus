@@ -4,6 +4,13 @@
 		height: 500px;
 		display: inline-block;
 	}
+
+	.other {
+		h5 {
+			color: #757575;
+			padding: 10px 30px;
+		}
+	}
 </style>
 
 <template>
@@ -21,6 +28,11 @@
 			<div class="chart" id="solid-pie"></div>
 		</div>
 	</section>
+	<section class="other">
+		<h3 class="doc-title">Other</h3>
+		<h5>zeus 结合了可视化图表库 echarts ，可以方便直观的可视化展示数据</h5>
+		<h5>更多图表类型请看 <a href="http://echarts.baidu.com/index.html">Echarts</a> 的官方文档</h5>
+	</section>
 </template>
 
 <script>
@@ -32,7 +44,9 @@
 			ZCode
 		},
 		ready () {
-			this.$dispatch('changeComponent', 'Charts');
+			this.$nextTick(() => {
+				this.$dispatch('changeComponent', 'Charts');
+			});
 			const doc = document;
 
 			// 柱状图

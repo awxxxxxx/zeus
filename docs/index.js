@@ -6,6 +6,7 @@ import ZMdl from '../src/zeus.js';
 import VueRouter from 'vue-router';
 import App from './app.vue';
 import About from './about.vue';
+import Dashboard from './dashboard.vue';
 import Examples from './example/example.js'	;
 
 require('prismjs/themes/prism.css');
@@ -25,6 +26,10 @@ router.map({
 	'/about': {
 		name: 'about',
 		component: About
+	},
+	'/dashboard': {
+		name: 'dashboard',
+		component: Dashboard
 	},
 	'/doc': {
 		name: 'doc',

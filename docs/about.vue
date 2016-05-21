@@ -34,6 +34,9 @@
 	.permission {
 		background: #3F51B5;
 		color: #fff;
+		> div {
+			margin-top: 15px;
+		}
 	}
 
 	.usability {
@@ -70,6 +73,7 @@
 		<h5>Zeus-Server 提供了完善的接口校验机制，同时提供了权限配置接口，便于权限相关的操作</h5>
 		<h5>权限控制到接口级别</h5>
 		<img src="./asserts/ic_https_white_48px.svg">
+		<div><button class="mdl-button mdl-js-button mdl-js-ripple-effect  mdl-button--raised mdl-button--accent" id="doc-component" v-link="{name: 'dashboard'}">查看权限控制台</button></div>
 	</section>
 	<section class="usability">
 		<h3>易用性强</h3>
