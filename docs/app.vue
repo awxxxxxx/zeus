@@ -27,11 +27,13 @@
         <a class="mdl-navigation__link" v-link="{name: 'forms'}">Forms</a>
         <a class="mdl-navigation__link" v-link="{name: 'slider'}">Slider</a>
         <a class="mdl-navigation__link" v-link="{name: 'table'}">Table</a>
+        <a class="mdl-navigation__link" v-link="{name: 'alert'}">Alert</a>
         <a class="mdl-navigation__link" v-link="{name: 'dialog'}">Dialog</a>
         <a class="mdl-navigation__link" v-link="{name: 'datepicker'}">Datepicker</a>
         <a class="mdl-navigation__link" v-link="{name: 'pagination'}">Pagination</a>
         <a class="mdl-navigation__link" v-link="{name: 'select'}">Select</a>
         <a class="mdl-navigation__link" v-link="{name: 'upload'}">Upload</a>
+        <a class="mdl-navigation__link" v-link="{name: 'charts'}">Charts</a>
         <div class="mdl-layout-spacer"></div>
       </nav>
   </div>

@@ -3,9 +3,14 @@
 </template>
 
 <script>
+	import ZCode from '../utils/zcode.vue';
+
 	export default {
+		components: {
+			ZCode
+		},
 		ready () {
-			this.$dispatch('changeComponent', 'Upload');
+			this.$dispatch('changeComponent', 'Alert');
 		}
 	}
 </script>
