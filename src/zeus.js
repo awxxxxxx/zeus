@@ -10,6 +10,7 @@ import ZTable from './table.vue';
 import ZDialog from './dialog.vue';
 import ZDatepicker from './datepicker.vue';
 import ZPagination from './pagination.vue';
+import ZAlert from './alert.vue';
 
 export const components = {
 	ZButton,
@@ -21,7 +22,8 @@ export const components = {
 	ZTable,
 	ZDialog,
 	ZDatepicker,
-	ZPagination
+	ZPagination,
+	ZAlert
 }
 
 
