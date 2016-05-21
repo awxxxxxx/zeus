@@ -27,6 +27,9 @@
 				timeTick: null
 			}
 		},
+		ready () {
+			componentHandler.upgradeElement(this.$el, "MaterialSnackbar");
+		},
 		watch: {
 			showAlert (val) {
 				if (val) {
