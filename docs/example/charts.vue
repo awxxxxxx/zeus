@@ -14,6 +14,13 @@
 			<div class="chart" id="dynamic-bar"></div>
 		</div>
 	</section>
+	<section>
+		<h3 class="doc-title">Pie(饼状图)</h3>
+		<div class="chart-content">
+			<div class="chart" id="pie"></div>
+			<div class="chart" id="solid-pie"></div>
+		</div>
+	</section>
 </template>
 
 <script>
@@ -27,6 +34,8 @@
 		ready () {
 			this.$dispatch('changeComponent', 'Charts');
 			const doc = document;
+
+			// 柱状图
 			const bar = echarts.init(doc.getElementById('bar'));
 			bar.setOption({
 				title: { text: '柱状图' },
@@ -42,6 +51,7 @@
 		    }]
 			});
 
+			// 动态柱状图
 			const dynamicBar = echarts.init(doc.getElementById('dynamic-bar'));
 			const option = {
 				title: {
@@ -161,7 +171,99 @@
 		    option.xAxis[1].data.shift();
 		    option.xAxis[1].data.push(app.count++);
 		    dynamicBar.setOption(option);
-			}, 2000)
+			}, 2000);
+
+			// 饼状图
+			const pie = echarts.init(doc.getElementById('pie'));
+			pie.setOption({
+				title: {
+					subtext: '环形饼状图',
+					x: 'center'
+				},
+		    tooltip: {
+		      trigger: 'item',
+		      formatter: "{a} <br/>{b}: {c} ({d}%)"
+		    },
+		    legend: {
+		      orient: 'vertical',
+		      x: 'left',
+		      data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+		    },
+		    series: [
+	        {
+            name:'访问来源',
+            type:'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            label: {
+              normal: {
+                show: false,
+                position: 'center'
+              },
+              emphasis: {
+                show: true,
+                textStyle: {
+                  fontSize: '30',
+                  fontWeight: 'bold'
+                }
+              }
+            },
+            labelLine: {
+              normal: {
+                show: false
+              }
+            },
+            data:[
+              {value:335, name:'直接访问'},
+              {value:310, name:'邮件营销'},
+              {value:234, name:'联盟广告'},
+              {value:135, name:'视频广告'},
+              {value:1548, name:'搜索引擎'}
+            ]
+	        }
+		    ]
+			});
+
+			// 实心饼状图
+			const solidPie = echarts.init(doc.getElementById('solid-pie'));
+			solidPie.setOption({
+		    title : {
+	        text: '某站点用户访问来源',
+	        subtext: '实心饼状图',
+	        x:'center'
+		    },
+		    tooltip : {
+	        trigger: 'item',
+	        formatter: "{a} <br/>{b} : {c} ({d}%)"
+		    },
+		    legend: {
+	        orient: 'vertical',
+	        left: 'left',
+	        data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+		    },
+		    series : [
+	        {
+	            name: '访问来源',
+	            type: 'pie',
+	            radius : '55%',
+	            center: ['50%', '60%'],
+	            data:[
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:234, name:'联盟广告'},
+                {value:135, name:'视频广告'},
+                {value:1548, name:'搜索引擎'}
+	            ],
+	            itemStyle: {
+                emphasis: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+	            }
+	        }
+		    ]
+			});
 		}
 	}
 </script>
