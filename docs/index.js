@@ -8,6 +8,7 @@ import Doc from './doc.vue';
 import About from './about.vue';
 import Dashboard from './dashboard/dashboard.vue';
 import DashboardAdmin from './dashboard/admin.vue';
+import DashboardPlatform from './dashboard/platform.vue';
 import Examples from './example/example.js'	;
 
 require('prismjs/themes/prism.css');
@@ -35,6 +36,10 @@ router.map({
 			'/admin': {
 				name: 'admin',
 				component: DashboardAdmin
+			},
+			'/platform': {
+				name: 'platform',
+				component: DashboardPlatform
 			}
 		}
 	},
