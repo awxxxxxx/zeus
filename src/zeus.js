@@ -11,6 +11,7 @@ import ZDialog from './dialog.vue';
 import ZDatepicker from './datepicker.vue';
 import ZPagination from './pagination.vue';
 import ZAlert from './alert.vue';
+import ZSelect from './select.vue';
 
 export const components = {
 	ZButton,
@@ -23,7 +24,8 @@ export const components = {
 	ZDialog,
 	ZDatepicker,
 	ZPagination,
-	ZAlert
+	ZAlert,
+	ZSelect
 }
 
 

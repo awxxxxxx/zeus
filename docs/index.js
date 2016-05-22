@@ -4,9 +4,10 @@ require('material-design-lite/material.js');
 import Vue from 'vue';
 import ZMdl from '../src/zeus.js';
 import VueRouter from 'vue-router';
-import App from './app.vue';
+import Doc from './doc.vue';
 import About from './about.vue';
-import Dashboard from './dashboard.vue';
+import Dashboard from './dashboard/dashboard.vue';
+import DashboardAdmin from './dashboard/admin.vue';
 import Examples from './example/example.js'	;
 
 require('prismjs/themes/prism.css');
@@ -14,7 +15,7 @@ require('prismjs/themes/prism.css');
 Vue.use(ZMdl);
 Vue.use(VueRouter);
 
-let router = new VueRouter();
+let router = new VueRouter({history: true});
 
 const app = Vue.extend({
 	el () {
@@ -29,11 +30,17 @@ router.map({
 	},
 	'/dashboard': {
 		name: 'dashboard',
-		component: Dashboard
+		component: Dashboard,
+		subRoutes: {
+			'/admin': {
+				name: 'admin',
+				component: DashboardAdmin
+			}
+		}
 	},
 	'/doc': {
 		name: 'doc',
-		component: App,
+		component: Doc,
 		subRoutes: {
 			'/button': {
 				name: 'button',
@@ -84,6 +91,7 @@ router.map({
 });
 router.redirect({
 	'/doc': '/doc/button',
+	'/dashboard': 'dashboard/admin',
 	'*': '/about'
 })
 router.start(app, 'body');
