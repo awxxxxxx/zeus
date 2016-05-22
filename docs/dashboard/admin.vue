@@ -13,7 +13,7 @@
 
 <template>
 	<div class="admin">
-		<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+		<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" id="dash-admin">
 		  <thead>
 		    <tr>
 		      <th class="" v-for="field in fields">{{ field.title }}</th>
@@ -22,8 +22,10 @@
 		  </thead>
 		  <tbody>
 		    <tr v-for="grid in gridData">
-		      <td class="" v-for="field in fields">{{grid[field.field]}}</td>
-					<td>test</td>
+		      <td class="" v-for="field in fields">{{ grid[field.field] }}</td>
+					<td>
+						<z-button :accent="true" :raised="true">操作</z-button>
+					</td>
 		    </tr>
 		  </tbody>
 		</table>
@@ -48,7 +50,7 @@
 		},
 		ready () {
 			this.$dispatch('changeTitle', '人员管理');
-			componentHandler.upgradeElement(this.$el);
+			componentHandler.upgradeElement(document.getElementById('dash-admin'));
 		}
 	}
 </script>
