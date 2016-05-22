@@ -30,7 +30,7 @@
 						}
 					}
 				}
-			<script>`,
+			<\/script>`,
 				propsCode: `{
 				total: Number,	// required
 				pageSize: Number, // default 10

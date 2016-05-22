@@ -49,12 +49,13 @@
 <template>
 	<header class="about">
 		<h1 class="title">ZEUS</h1>
-		<p>zues 是使用 Vue.js 和 Node.js 结合 Material Design 构建的可视化运营平台</p>
+		<h5>zues 是使用 Vue.js 和 Node.js 结合 Material Design 构建的可视化运营平台</h5>
 	</header>
 	<section class="component">
 		<h3 class="doc-title">组件丰富</h3>
 		<h5>zeus 集成了常用的基本组件，满足业务开发需要</h5>
-		<p>Table、Charts、Dialog、Datepicker、Alert...</p>
+		<h6>组件同时也可以单独构建抽离，用于其它项目</h6>
+		<p>Table、Charts、Dialog、Datepicker、Select...</p>
 		<section>
 			<img src="./asserts/ic_change_history_black_48px.svg">
 			<img src="./asserts/ic_trending_flat_black_48px.svg">

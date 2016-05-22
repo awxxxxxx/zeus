@@ -40,7 +40,7 @@
 						}
 					}
 				}
-			<script>`,
+			<\/script>`,
 				dateoption: {
 					type: 'min',
 					format: 'YYYY-MM-DD HH:mm'
@@ -62,7 +62,7 @@
 						}
 					}
 				}
-			<script>`,
+			<\/script>`,
 				propsCode: `{
 				option: {
 					type: 'day' || 'min',
