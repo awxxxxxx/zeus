@@ -15,7 +15,7 @@ require('prismjs/themes/prism.css');
 Vue.use(ZMdl);
 Vue.use(VueRouter);
 
-let router = new VueRouter({history: true});
+let router = new VueRouter();
 
 const app = Vue.extend({
 	el () {
