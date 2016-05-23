@@ -1,9 +1,9 @@
 <template>
   <dialog class="mdl-dialog">
     <slot></slot>
-    <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
-      <button type="button" class="mdl-button" @click="confirm">Yes</button>
-      <button type="button" class="mdl-button close" @click="cancel">No</button>
+    <div class="mdl-dialog__actions mdl-dialog__actions">
+      <button type="button" class="mdl-button" @click="confirm">确定</button>
+      <button type="button" class="mdl-button close" @click="cancel">取消</button>
     </div>
   </dialog>
 </template>

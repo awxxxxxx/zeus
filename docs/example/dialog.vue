@@ -6,9 +6,9 @@
         确定要执行此操作?
       </p>
     </div>
-    <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
-      <button type="button" class="mdl-button" @click="close">Yes</button>
-      <button type="button" class="mdl-button close" @click="close">No</button>
+    <div class="mdl-dialog__actions mdl-dialog__actions">
+      <button type="button" class="mdl-button" @click="close">确定</button>
+      <button type="button" class="mdl-button close" @click="close">取消</button>
     </div>
 	</z-dialog>
 	<z-code lang="html">{{ dialogCode }}</z-code>
