@@ -11,8 +11,8 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Dashboard</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" v-link="{name: 'platform'}">接入平台管理</a>
         <a class="mdl-navigation__link" v-link="{name: 'admin'}">人员管理</a>
+        <a class="mdl-navigation__link" v-link="{name: 'platform'}">接入平台管理</a>
         <a class="mdl-navigation__link" v-link="{name: 'about'}">About</a>
         <a class="mdl-navigation__link" v-link="{name: 'doc'}">组件文档</a>
         <a class="mdl-navigation__link" v-link="{name: 'about'}">退出</a>

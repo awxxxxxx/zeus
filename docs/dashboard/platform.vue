@@ -13,7 +13,7 @@
 
 <template>
 	<div class="platform">
-		<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" id="platform">
+		<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" id="platform">
 		  <thead>
 		    <tr>
 		      <th class="" v-for="field in fields">{{ field.title }}</th>
@@ -48,7 +48,6 @@
 		},
 		ready () {
 			this.$dispatch('changeTitle', '接入平台管理');
-			componentHandler.upgradeElement(document.getElementById('platform'));
 		}
 	}
 </script>

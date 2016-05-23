@@ -4,6 +4,7 @@ require('material-design-lite/material.js');
 import Vue from 'vue';
 import ZMdl from '../src/zeus.js';
 import VueRouter from 'vue-router';
+import VueResoure from 'vue-resource';
 import Doc from './doc.vue';
 import About from './about.vue';
 import Dashboard from './dashboard/dashboard.vue';
@@ -14,6 +15,8 @@ import Examples from './example/example.js'	;
 require('prismjs/themes/prism.css');
 
 Vue.use(ZMdl);
+Vue.use(VueResoure);
+Vue.http.options.root = 'http://localhost:3000';
 Vue.use(VueRouter);
 
 let router = new VueRouter();
