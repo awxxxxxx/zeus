@@ -9,6 +9,8 @@ import Pagination from './pagination.vue';
 import Select from './select.vue';
 import Upload from './upload.vue';
 import Charts from './charts.vue';
+import Installation from './installation.vue';
+import Api from './api.vue';
 
 export default {
 	Buttons,
@@ -21,5 +23,7 @@ export default {
 	Select,
 	Upload,
 	Charts,
-	Alert
+	Alert,
+	Installation,
+	Api
 }

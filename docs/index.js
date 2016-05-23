@@ -90,6 +90,14 @@ router.map({
 			'/alert': {
 				name: 'alert',
 				component: Examples.Alert
+			},
+			'/installation': {
+				name: 'installation',
+				component: Examples.Installation
+			},
+			'/api': {
+				name: 'api',
+				component: Examples.Api
 			}
 		}
 	},
