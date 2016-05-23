@@ -23,6 +23,8 @@
     </header>
       <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
         <a class="mdl-navigation__link" v-link="{name: 'about'}">About</a>
+        <a class="mdl-navigation__link" v-link="{name: 'installation'}">Installation</a>
+        <a class="mdl-navigation__link" v-link="{name: 'api'}">API</a>
         <a class="mdl-navigation__link" v-link="{name: 'button'}">Button</a>
         <a class="mdl-navigation__link" v-link="{name: 'forms'}">Forms</a>
         <a class="mdl-navigation__link" v-link="{name: 'slider'}">Slider</a>
