@@ -25,9 +25,6 @@
 			}
 		}
 	}
-	.getmdl-select {
-		width: 100% !important;
-	}
 	.mdl-input {
 		display: inline-block;
     padding: 6px;
@@ -53,22 +50,11 @@
 		    <tr v-for="grid in gridData">
 		      <td class="" v-for="field in fields">{{ grid[field.field] }}</td>
 					<td>
-						<z-button :accent="true" :raised="true" @click="edit(grid, $index)">编辑</z-button>
-						<z-button :accent="true" :raised="true" @click="addPlatform(grid, $index)">增加平台</z-button>
+						<z-button :accent="true" :raised="true" @click="edit(grid, $index)">go</z-button>
 					</td>
 		    </tr>
 		  </tbody>
 		</table>
-		<z-button :accent="true" :raised="true" @click="add">增加</z-button>
-		<z-dialog v-ref:dialog>
-			<div v-for="field in fields" class="group">
-				<label for="">{{ field.title }}:</label>
-				<input type="field.type" class="mdl-input" v-model="formData[field.field]">
-			</div>
-		</z-dialog>
-		<z-dialog v-ref:select>
-			<z-select :selected.sync="selected" :options="options" label="平台" id="Platform"></z-select>
-		</z-dialog>
 	</div>
 </template>
 
@@ -82,28 +68,15 @@
 					{title: '权限等级', field: 'level', type: 'number'},
 				],
 				gridData: [],
-				selected: '',
-				options:[],
 				formData: {},
 				resourceUrl: 'zeus/accounts'
 			}
 		},
 		ready () {
-			this.$dispatch('changeTitle', '人员管理');
+			this.$dispatch('changeTitle', '我的平台');
 			this.$http.get(this.resourceUrl).then((res) => {
 				this.gridData = res.data.data;
 			});
-			this.$http.get('zeus/backends').then((res) => {
-				this.options = [];
-				for (let i in res.data.data) {
-					this.options.push({
-						label: res.data.data[i].name,
-						value: res.data.data[i]._id
-					})
-				}
-			}, () => {
-
-			})
 		},
 		methods: {
 			add () {
@@ -115,16 +88,6 @@
 				})
 				.then((res) => {
 					this.gridData.push(res.data.data);
-				});
-			},
-			addPlatform () {
-				this.$refs.select.show().then(() => {
-					return this.$http.post(this.resourceUrl, this.formData);
-				}, () => {
-					console.log('cancel')
-				})
-				.then((res) => {
-					
 				});
 			},
 			edit (grid, index) {

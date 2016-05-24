@@ -10,6 +10,7 @@ import About from './about.vue';
 import Dashboard from './dashboard/dashboard.vue';
 import DashboardAdmin from './dashboard/admin.vue';
 import DashboardPlatform from './dashboard/platform.vue';
+import DashboardUser from './dashboard/user.vue';
 import Examples from './example/example.js'	;
 
 require('prismjs/themes/prism.css');
@@ -39,6 +40,10 @@ router.map({
 			'/admin': {
 				name: 'admin',
 				component: DashboardAdmin
+			},
+			'/user': {
+				name: 'user',
+				component: DashboardUser
 			},
 			'/platform': {
 				name: 'platform',

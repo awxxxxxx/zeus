@@ -34,7 +34,7 @@
 		methods: {
 			show() {
 				this.showDialog = true;
-
+				this.result = 'none';
 				return new Promise((resolve, reject) => {
 					this.$watch('result', (newVal, oldVal) => {
 						if (newVal === 'confirm') {

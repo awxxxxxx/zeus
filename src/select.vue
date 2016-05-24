@@ -67,7 +67,10 @@
 				showField: ''
 			}
 		},
-		watch: {
+		watch: { 
+			options () {
+				getmdlSelect.init(this.$el);
+			},
 			showField () {
 				this.selected  = getmdlSelect.selectedValue;
 			}
