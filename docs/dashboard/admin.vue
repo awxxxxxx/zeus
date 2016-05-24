@@ -131,11 +131,12 @@
 				this.$refs.select.show().then(() => {
 					return this.$http.post('zeus/access', data);
 				}, () => {
-					console.log('cancel')
+					throw Error('cancel');
 				})
 				.then((res) => {
 					this.toast = true;
-				});
+				})
+				.catch(() => {})
 			},
 			edit (grid, index) {
 				const temp = JSON.parse(JSON.stringify(grid));
@@ -143,7 +144,7 @@
 				this.$refs.dialog.show().then(() => {
 					return this.$http.put(this.resourceUrl + '/' + grid._id, this.formData);
 				}, () => {
-					console.log('cancel')
+					throw Error('cancel');
 				})
 				.then((res) => {
 					for (let i in this.formData) {
@@ -151,6 +152,7 @@
 					}
 					this.toast = true;
 				})
+				.catch(() =>{});
 			}
 		}
 	}
