@@ -20,7 +20,7 @@ Vue.use(VueResoure);
 Vue.http.options.root = 'http://localhost:3000';
 Vue.use(VueRouter);
 
-let router = new VueRouter();
+let router = new VueRouter({history: true});
 
 const app = Vue.extend({
 	el () {

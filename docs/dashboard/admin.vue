@@ -59,7 +59,7 @@
 		    </tr>
 		  </tbody>
 		</table>
-		<z-button :accent="true" :raised="true" @click="add">增加</z-button>
+		<z-button :accent="true" :raised="true" @click="add">增加人员</z-button>
 		<z-dialog v-ref:dialog>
 			<div v-for="field in fields" class="group">
 				<label for="">{{ field.title }}:</label>
@@ -69,6 +69,7 @@
 		<z-dialog v-ref:select>
 			<z-select :selected.sync="selected" :options="options" label="平台" id="Platform"></z-select>
 		</z-dialog>
+		<z-alert :show-alert.sync="toast" :option="barOption"></z-alert>
 	</div>
 </template>
 
@@ -85,6 +86,10 @@
 				selected: '',
 				options:[],
 				formData: {},
+				toast: false,
+				barOption: {
+					message : '操作成功'
+				},
 				resourceUrl: 'zeus/accounts'
 			}
 		},
@@ -115,16 +120,21 @@
 				})
 				.then((res) => {
 					this.gridData.push(res.data.data);
+					this.toast = true;
 				});
 			},
-			addPlatform () {
+			addPlatform (grid) {
+				const data = {
+					backend: this.selected,
+					account: grid._id
+				}
 				this.$refs.select.show().then(() => {
-					return this.$http.post(this.resourceUrl, this.formData);
+					return this.$http.post('zeus/access', data);
 				}, () => {
 					console.log('cancel')
 				})
 				.then((res) => {
-					
+					this.toast = true;
 				});
 			},
 			edit (grid, index) {
@@ -139,6 +149,7 @@
 					for (let i in this.formData) {
 						grid[i] = this.formData[i];
 					}
+					this.toast = true;
 				})
 			}
 		}

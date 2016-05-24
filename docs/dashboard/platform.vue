@@ -56,7 +56,7 @@
 		    </tr>
 		  </tbody>
 		</table>
-		<z-button :accent="true" :raised="true" @click="add">增加</z-button>
+		<z-button :accent="true" :raised="true" @click="add">增加平台</z-button>
 		<z-dialog v-ref:dialog>
 			<div v-for="field in fields" class="group">
 				<label for="">{{ field.title }}:</label>
@@ -88,7 +88,7 @@
 			}
 		},
 		ready () {
-			this.$dispatch('changeTitle', '人员管理');
+			this.$dispatch('changeTitle', '接入平台管理');
 			this.$http.get(this.resourceUrl).then((res) => {
 				this.gridData = res.data.data;
 			});
