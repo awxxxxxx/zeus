@@ -124,11 +124,11 @@
 				});
 			},
 			addPlatform (grid) {
-				const data = {
-					backend: this.selected,
-					account: grid._id
-				}
 				this.$refs.select.show().then(() => {
+					const data = {
+						backend: this.selected,
+						account: grid._id
+					}
 					return this.$http.post('zeus/access', data);
 				}, () => {
 					throw Error('cancel');

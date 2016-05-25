@@ -76,6 +76,7 @@
 			return {
 				fields: [
 					{title: '名称', field: 'name', type: 'text'},
+					{title: '英文名称', field: 'ename', type: 'text'},
 					{title: '接口地址', field: 'path', type: 'text'},
 				],
 				toast: false,
@@ -102,7 +103,11 @@
 					console.log('cancel')
 				})
 				.then((res) => {
-					this.gridData.push(res.data.data);
+					if (!res.data.status) {
+						this.gridData.push(res.data.data);
+					} else {
+						this.barOption.message = res.data.msg;
+					}
 					this.toast = true;
 				});
 			},
@@ -115,8 +120,12 @@
 					console.log('cancel')
 				})
 				.then((res) => {
-					for (let i in this.formData) {
-						grid[i] = this.formData[i];
+					if (!res.data.status) {
+						for (let i in this.formData) {
+							grid[i] = this.formData[i];
+						}
+					} else {
+						this.barOption.message = res.data.msg;
 					}
 					this.toast = true;
 				})

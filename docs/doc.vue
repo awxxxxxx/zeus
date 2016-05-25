@@ -47,11 +47,11 @@
 <script>
 
 	export default {
-		ready () {
-			this.$on('changeComponent', (name) => {
-				this.Home = name;
-			});
-		},
+    events: {
+      changeComponent (name) {
+        this.Home = name;
+      }
+    },
 		data () {
 			return {
 				Home: 'Button'

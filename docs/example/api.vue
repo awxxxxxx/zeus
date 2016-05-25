@@ -37,7 +37,9 @@
 			}
 		},
 		ready () {
-			this.$dispatch('changeComponent', 'API');
+			this.$nextTick(() => {
+				this.$dispatch('changeComponent', 'API');
+			});
 		}
 	}
 </script>

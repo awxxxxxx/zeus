@@ -11,14 +11,20 @@ import Dashboard from './dashboard/dashboard.vue';
 import DashboardAdmin from './dashboard/admin.vue';
 import DashboardPlatform from './dashboard/platform.vue';
 import DashboardUser from './dashboard/user.vue';
+import Login from './login.vue';
 import Examples from './example/example.js'	;
-
+import Nomatch from './404.vue';
 require('prismjs/themes/prism.css');
 
 Vue.use(ZMdl);
 Vue.use(VueResoure);
 Vue.http.options.root = 'http://localhost:3000';
+Vue.http.options.xhr = {
+	withCredentials: true
+}
 Vue.use(VueRouter);
+
+const user = sessionStorage.getItem('user');
 
 let router = new VueRouter({history: true});
 
@@ -32,6 +38,10 @@ router.map({
 	'/about': {
 		name: 'about',
 		component: About
+	},
+	'/login': {
+		name: 'login',
+		component: Login
 	},
 	'/dashboard': {
 		name: 'dashboard',
@@ -109,10 +119,29 @@ router.map({
 			}
 		}
 	},
+	'/404': {
+		name: '404',
+		component: Nomatch
+	}
 });
 router.redirect({
+	'/': '/about',
 	'/doc': '/doc/button',
 	'/dashboard': 'dashboard/admin',
-	'*': '/about'
+	'*': '/404'
+});
+
+
+router.beforeEach(({to, next}) => {
+	if (/dashboard/.test(to.path)) {
+		if (user) {
+			next();
+		} else {
+			router.go({name: 'login'});
+		}
+	} else {
+		next();
+	}
+	
 })
 router.start(app, 'body');

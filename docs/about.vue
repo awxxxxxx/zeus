@@ -77,7 +77,7 @@
 		<img src="./asserts/ic_https_white_48px.svg">
 		<div>
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect  mdl-button--raised mdl-button--accent" id="doc-api" v-link="{name: 'api'}">查看后台接入规范</button>
-			<button class="mdl-button mdl-js-button mdl-js-ripple-effect  mdl-button--raised mdl-button--accent" id="doc-component" v-link="{name: 'dashboard'}">查看权限控制台</button>
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect  mdl-button--raised mdl-button--accent" id="doc-component" v-link="{name: 'user'}">查看权限控制台</button>
 		</div>
 	</section>
 	<section class="usability">

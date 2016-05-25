@@ -50,7 +50,7 @@
 		    <tr v-for="grid in gridData">
 		      <td class="" v-for="field in fields">{{ grid[field.field] }}</td>
 					<td>
-						<z-button :accent="true" :raised="true" @click="edit(grid, $index)">go</z-button>
+						<z-button :accent="true" :raised="true" v-link="{path: grid.path}">go</z-button>
 					</td>
 		    </tr>
 		  </tbody>
@@ -63,13 +63,12 @@
 		data () {
 			return {
 				fields: [
-					{title: '姓名', field: 'name', type: 'text'},
-					{title: '性别', field: 'sex', type: 'text'},
-					{title: '权限等级', field: 'level', type: 'number'},
+					{title: '平台名称', field: 'name', type: 'text'},
+					{title: '路径', field: 'path', type: 'text'}
 				],
 				gridData: [],
 				formData: {},
-				resourceUrl: 'zeus/accounts'
+				resourceUrl: 'zeus/access'
 			}
 		},
 		ready () {
