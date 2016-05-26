@@ -77,7 +77,8 @@
 				fields: [
 					{title: '名称', field: 'name', type: 'text'},
 					{title: '英文名称', field: 'ename', type: 'text'},
-					{title: '接口地址', field: 'path', type: 'text'},
+					{title: '前端接口地址', field: 'path', type: 'text'},
+					{title: '后端接口地址', field: 'host', type: 'text'},
 				],
 				toast: false,
 				barOption: {

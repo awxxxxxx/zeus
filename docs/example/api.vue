@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h3 class="doc-title">后台数据接入规范</h3>
+		<h3 class="doc-title">数据接入规范</h3>
 		<z-code lang="javascript">{{ apiCode }}</z-code>
 	</section>
 	<section>

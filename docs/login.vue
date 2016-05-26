@@ -90,9 +90,9 @@
 							this.barOption.message = res.data.msg;
 							this.toast = true;
 						} else {
-							this.$route.router.go({name: 'user'});
 							let user = JSON.stringify(res.data.data);
 							sessionStorage.setItem('user', user);
+							this.$route.router.go({name: 'user'});
 						}
 					}, (e) => {
 						console.log(e)

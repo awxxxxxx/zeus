@@ -24,8 +24,6 @@ Vue.http.options.xhr = {
 }
 Vue.use(VueRouter);
 
-const user = sessionStorage.getItem('user');
-
 let router = new VueRouter({history: true});
 
 const app = Vue.extend({
@@ -134,6 +132,7 @@ router.redirect({
 
 router.beforeEach(({to, next}) => {
 	if (/dashboard/.test(to.path)) {
+		let user = sessionStorage.getItem('user');
 		if (user) {
 			next();
 		} else {

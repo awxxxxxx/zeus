@@ -119,7 +119,11 @@
 					console.log('cancel')
 				})
 				.then((res) => {
-					this.gridData.push(res.data.data);
+					if (!res.data.status) {
+						this.gridData.push(res.data.data);
+					} else {
+						this.barOption.message = res.data.msg;
+					}
 					this.toast = true;
 				});
 			},
@@ -147,8 +151,12 @@
 					throw Error('cancel');
 				})
 				.then((res) => {
-					for (let i in this.formData) {
-						grid[i] = this.formData[i];
+					if (!res.data.status) {
+						for (let i in this.formData) {
+							grid[i] = this.formData[i];
+						}
+					} else {
+						this.barOption.message = res.data.msg;
 					}
 					this.toast = true;
 				})

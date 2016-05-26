@@ -16,7 +16,7 @@
         <a class="mdl-navigation__link" v-link="{name: 'user'}">我的平台</a>
         <a class="mdl-navigation__link" v-link="{name: 'about'}">About</a>
         <a class="mdl-navigation__link" v-link="{name: 'doc'}">组件文档</a>
-        <a class="mdl-navigation__link" v-link="{name: 'about'}">退出</a>
+        <a class="mdl-navigation__link" @click="logout">退出</a>
       </nav>
     </div>
     <main class="mdl-layout__content">
@@ -36,6 +36,14 @@
     },
     ready () {
       componentHandler.upgradeElement(this.$el);
+    },
+    methods: {
+      logout () {
+        this.$http.get('zeus/logout').then((res) => {
+          sessionStorage.removeItem('user');
+          this.$route.router.go({name: 'about'});
+        })
+      }
     },
     events: {
       changeTitle(title) {
