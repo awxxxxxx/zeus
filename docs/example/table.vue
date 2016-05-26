@@ -1,12 +1,12 @@
 <template>
 	<section>
-		<h5 class="doc-title">with checkbox</h5>
-		<z-table></z-table>
+		<h3 class="doc-title">Table</h3>
+		<z-table :fields="fields" :grid-data="gridData"></z-table>
+		<z-code lang="html">{{ tableCode }}</z-code>
 	</section>
 	<section>
-		<h5 class="doc-title">without checkbox</h5>
-		<z-table :table-options="options"></z-table>
-		<z-code lang="html">{{ tableCode }}</z-code>
+		<h3 class="doc-title">Props</h3>
+		<z-code lang="javascript">{{ propsCode }}</z-code>
 	</section>
 
 </template>
@@ -23,20 +23,45 @@
 				options: {
 					checkbox: false
 				},
+				fields: [
+					{ title: '商品名', field: 'name' },
+					{ title: '价格', field: 'price' },
+					{ title: '销量', field: 'sale' },
+					{ title: '库存', field: 'stock' },
+				],
+				gridData: [
+					{name: '毛巾', price: '12', sale: 120, stock: 300},
+					{name: '浴巾', price: '20', sale: 140, stock: 400},
+					{name: '餐巾', price: '10', sale: 220, stock: 330}
+				],
 				tableCode: `<template>
-				<z-table :table-options="options"></z-table>
+				<z-table :fields="fields" :grid-data="gridData"></z-table>
 			</template>
 			<script>
 				export default {
 					data () {
 						return {
-							options: {
-								checkbox: false
-							}
+							fields: [
+								{ title: '商品名', field: 'name' },
+								{ title: '价格', field: 'price' },
+								{ title: '销量', field: 'sale' },
+								{ title: '库存', field: 'stock' },
+							],
+							gridData: [
+								{ name: '毛巾', price: '12', sale: 120, stock: 300 },
+								{ name: '浴巾', price: '20', sale: 140, stock: 400 },
+								{ name: '餐巾', price: '10', sale: 220, stock: 330 }
+							]
 						}
 					}
 				}
-			<\/script>`
+			<\/script>`,
+				propsCode: `
+				{
+					fields: [{ title: '表头标题', field: '标题对应的字段'}],
+					gridData: 'Array', // 展示的数据
+				}
+				`
 			}
 		},
 		ready () {
