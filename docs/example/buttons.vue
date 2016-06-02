@@ -9,8 +9,8 @@
 			{{ code.buttonNormal }}
 		</z-code>
 		<h2 class="doc-title">Fab</h2>
-		<z-button :mini-fab="true"><i class="material-icons">add</i></z-button>
-		<z-button :fab="true"><i class="material-icons">add</i></z-button>
+		<z-button :mini-fab="true"><i class="material-icons">＋</i></z-button>
+		<z-button :fab="true"><i class="material-icons">＋</i></z-button>
 		<z-code lang="html">
 			{{ code.buttonFab }}
 		</z-code>
